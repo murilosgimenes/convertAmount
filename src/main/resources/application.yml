@@ -1,0 +1,17 @@
+application:
+  env: ${ENVIRONMENT:development}
+  name: '@pom.name@'
+  description: '@pom.description@'
+  version: '@pom.version@'
+
+server:
+  port: ${DEFAULT_PORT:8080}
+
+jwt:
+  secret: ${JWT_KEY:2b3735db6ca88bb27f8a1053f18e9611cb9c9295c4b14847f009b8cde8d43dd7}
+
+cors:
+  allowedOrigins: ${API_CORS_ALLOWED_ORIGINS:*}
+  allowedHeaders: ${API_CORS_ALLOWED_HEADERS:*}
+  allowedMethods: ${API_CORS_ALLOWED_METHODS:GET, PATCH, POST, PUT, DELETE}
+  pathCORS: ${API_CORS_PATH:/api/**}
